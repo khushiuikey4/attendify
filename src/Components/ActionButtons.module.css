@@ -1,0 +1,59 @@
+.actionButtonsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+
+.AddSubjectButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 16px;
+    gap: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* background-color: #FBC4AB; */
+    color: black;
+    border: 2px solid darkgreen;
+}
+
+.AddBulk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 16px;
+    gap: 4px;
+    border-radius: 10px;
+    /* background-color: palevioletred; */
+    color: black;
+    border: 2px solid darkgreen;
+    cursor: pointer;
+}
+
+@media (max-width:365px) {
+    .AddSubjectButton {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .AddBulk {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+
+}
+
+@media (max-width:480px) {
+    .actionButtonsContainer {
+        padding-inline: 0;
+    }
+}

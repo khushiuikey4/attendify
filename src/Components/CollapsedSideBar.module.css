@@ -1,0 +1,41 @@
+.hamBurgerContainer {
+    width: 54px;
+    height: 100%;
+    background-color: #0D0D0D;
+    border-radius: 16px;
+    padding: clamp(14px, 1vw, 20px);
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+
+}
+
+@media (max-width:480px) {
+    .hamBurgerContainer {
+        width: 45px;
+    }
+}
+
+.hamBurgerLogoContainer {
+    width: 100%;
+    color: white;
+    font-size: clamp(22px, 2vw, 32px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.CollidedLogoContainer {
+    width: 100%;
+    color: mediumseagreen;
+    font-size: clamp(22px, 2vw, 32px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

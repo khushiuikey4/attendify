@@ -1,0 +1,120 @@
+.SideBarContainer {
+    background-color: #0D0D0D;
+    border-radius: 16px;
+    padding: clamp(14px, 1.5vw, 24px);
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    width: 240px;
+
+}
+
+@media(max-width:600px) {
+    .SideBarContainer {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+
+.logoOuterContainer {
+    text-align: center;
+    padding-block: 9px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+.hamBurgerLogoContainer {
+    width: 100%;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logoContainer {
+    color: mediumseagreen;
+    cursor: pointer;
+}
+
+.webNameLink {
+    color: white;
+    text-decoration: none;
+}
+
+.dashBoard,
+.calender,
+.settings {
+    width: 100%;
+    text-align: center;
+    padding-block: 9px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    padding-left: 15px;
+    border-radius: 8px;
+}
+
+.dashBoard:hover {
+    background-color: #CBA3E3;
+    color: #0D0D0D;
+}
+
+.calender:hover {
+    background-color: #CBA3E3;
+    color: #0D0D0D;
+}
+
+.settings:hover {
+    background-color: #CBA3E3;
+    color: #0D0D0D;
+}
+
+.dashBoard:active {
+    background-color: #bb7ddf;
+
+
+}
+
+.calender:active {
+    background-color: #bb7ddf;
+}
+
+.settings:active {
+    background-color: #bb7ddf;
+}
+
+.settingLogoContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.divider {
+    width: 90%;
+    height: 1px;
+    background-color: white;
+}
