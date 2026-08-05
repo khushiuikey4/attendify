@@ -12,7 +12,6 @@ function ActionButtons() {
             </button>
             <button className={s.AddBulk}>
                 <IoCheckmarkDoneSharp />
-
                 Mark All
             </button>
         </div>

@@ -11,7 +11,7 @@ import { useState } from "react";
 
 
 
-function SubjectCard({ onDeleteHandle, deleteSubject, undo }) {
+function SubjectCard({ onDeleteHandle }) {
     let [active, setActive] = useState(false);
     let handleCardClick = () => {
         setActive(true);
@@ -46,8 +46,30 @@ function SubjectCard({ onDeleteHandle, deleteSubject, undo }) {
                         <span className={s.totalNumber}>Total Classes : 30</span>
                     </div>
                 </div>
-                <div className={s.percentageChart}>
-                    <div className={s.progressCircle}></div>
+                <div className={s.percentageProgress}>
+                    <div className={s.circularProgress}>
+                        <svg viewBox="0 0 100 100">
+                            {/* Background circle */}
+                            <circle
+                                className={s.progressBackground}
+                                cx="50"
+                                cy="50"
+                                r="42"
+                            />
+
+                            {/* Progress circle */}
+                            <circle
+                                className={s.progressCircle}
+                                cx="50"
+                                cy="50"
+                                r="42"
+                            />
+                        </svg>
+
+                        <div className={s.progressText}>
+                            82.5%
+                        </div>
+                    </div>
                 </div>
             </div>
             {/* <div className={s.removeSubject}>

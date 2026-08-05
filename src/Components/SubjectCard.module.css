@@ -1,64 +1,3 @@
-.modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    background-color: red;
-}
-
-.subjectDeleteDialogueBox {
-    background-color: #2C3036;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
-    box-sizing: border-box;
-    z-index: 999;
-}
-
-
-.title {
-    padding: 10px;
-    font-size: 19px;
-}
-
-.divider {
-    height: 1px;
-    background-color: white;
-}
-
-.dialogueBox {
-    padding: 15px;
-    font-size: 17px;
-}
-
-.deleteDecisionButtons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-
-}
-
-.dBtn {
-    flex: 1;
-    padding: 5px;
-    font-size: 16px;
-    font-weight: 600;
-    border: 2px solid transparent;
-    border-radius: 7px;
-}
-
-
-
-
 .subjectCardBox {
     background-color: #C5D3EE;
     border: 3px solid #8C9CC4;
@@ -98,14 +37,73 @@
 
 .subjectContentContainer {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     /* align-items: center; */
 }
+
+
+/* progress bar  */
+.circularProgress {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.percentageProgress {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.circularProgress svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.progressBackground {
+    fill: none;
+    stroke: #dce8df;
+    stroke-width: 7;
+}
+
+.progressCircle {
+    fill: none;
+    stroke: green;
+    stroke-width: 7;
+
+    /* This makes the ends curved */
+    stroke-linecap: round;
+
+    /* 264 is approximately the circumference of r=42 */
+    stroke-dasharray: 264;
+    stroke-dashoffset: 46;
+}
+
+.progressText {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* progressbar  */
 
 
 @media (max-width:1360px) {
     .subjectContentContainer {
         flex-direction: column;
+    }
+
+    .percentageProgress {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .attendenceInfo {
@@ -198,31 +196,4 @@
     background-color: #DC3545;
     color: white;
     border: 2px solid transparent;
-}
-
-.progressCircle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: conic-gradient(darkgreen 0% 83%,
-            #D9E0EA 83% 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.progressCircle::before {
-    content: "83%";
-
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    /* background: aliceblue; */
-    background-color: #C9E3E3;
-
-    font-size: 18px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

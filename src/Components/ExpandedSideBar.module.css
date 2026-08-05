@@ -10,6 +10,7 @@
     gap: 15px;
     height: 100%;
     width: 240px;
+    z-index: 1000;
 
 }
 
@@ -78,7 +79,10 @@
 
 .dashBoard:hover {
     background-color: #CBA3E3;
+    /* background-color: rgb(60, 179, 113, 0.5); */
+
     color: #0D0D0D;
+    /* color: white; */
 }
 
 .calender:hover {

@@ -1,0 +1,228 @@
+.OuterDashBoardContainer {
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: palevioletred; */
+    padding-block: 15px;
+}
+
+
+
+.InnerDashBoardContainer {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    background:
+        radial-gradient(circle at 0% 0%,
+            rgba(46, 204, 113, 0.25),
+            transparent 40%),
+        radial-gradient(circle at 100% 100%,
+            rgba(46, 204, 113, 0.18),
+            transparent 40%),
+        rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+
+
+}
+
+.InnerDashBoardContainer::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.dashBoardGeneralInfo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minmax(200px, 1fr));
+    gap: 10px;
+    /* overflow-y: scroll; */
+
+
+
+}
+
+/* .dashBoardGeneralInfo::-webkit-scrollbar {
+    display: none;
+} */
+
+.dashBoardInfoBox {
+    background-color: rgb(60, 179, 113, 0.2);
+    /* background-color: rgba(203, 163, 227, 0.5); */
+    border-radius: 15px;
+    padding: 20px;
+    gap: 10px;
+    /* border: 1px solid mediumseagreen; */
+    box-shadow:
+        0 8px 24px rgba(36, 80, 55, 0.08);
+    /* min-height: 232.4px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.dashTitle {
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: #34423A;
+    letter-spacing: -0.2px;
+    text-align: center;
+
+}
+
+.dashCardLogo {
+    font-size: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashFigure {
+    font-size: 35px;
+    font-weight: 600;
+    color: #34423A;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.totalPercentage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* progress bar  */
+.circularProgress {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.circularProgress svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.progressBackground {
+    fill: none;
+    stroke: #dce8df;
+    stroke-width: 7;
+}
+
+.progressCircle {
+    fill: none;
+    stroke: #35b86b;
+    /* stroke: green; */
+    stroke-width: 10;
+
+    /* This makes the ends curved */
+    stroke-linecap: round;
+
+    /* 264 is approximately the circumference of r=42 */
+    stroke-dasharray: 264;
+    stroke-dashoffset: 46;
+}
+
+.progressText {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* progressbar  */
+
+@media (max-width:764px) {
+    .InnerDashBoardContainer {
+        padding: 0;
+        border-end-end-radius: 0;
+        border-end-start-radius: 0;
+    }
+
+    .OuterDashBoardContainer {
+        padding-inline: 5px;
+    }
+}
+
+@media (max-width:485px) {
+    .dashBoardInfoBox {
+        border: 1px solid mediumseagreen;
+    }
+}
+
+/* subjectWise percentage and insights */
+
+.ChartAndInsightContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minmax(200px, 1fr));
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+    /* overflow-y: scroll; */
+    min-height: 200px;
+
+}
+
+.attendanceChartContainer {
+    background-color: rgb(60, 179, 113, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.chartContainer {
+    flex: 1;
+    border: 5px solid aliceblue;
+    border-radius: 15px;
+    padding: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashBar {
+    background-color: mediumseagreen;
+    font-size: 17px;
+    padding: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+}
+
+.attendanceInsightContainer {
+    background-color: rgb(60, 179, 113, 0.2);
+    border-radius: 15px;
+}

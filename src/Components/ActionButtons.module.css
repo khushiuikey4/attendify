@@ -36,6 +36,18 @@
     cursor: pointer;
 }
 
+
+.AddSubjectButton:hover,
+.AddBulk:hover {
+    background: #f5f5f5;
+}
+
+.AddSubjectButton:active,
+.AddBulk:active {
+    background: #e8e8e8;
+    transform: scale(1.02);
+}
+
 @media (max-width:365px) {
     .AddSubjectButton {
         padding: 10px;
