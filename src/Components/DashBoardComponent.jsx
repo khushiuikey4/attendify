@@ -75,6 +75,8 @@ function DashBoardComponent() {
                 </div>
             </div>
 
+            {/* subjectWise insights  */}
+
         </div>
     </div>;
 }
