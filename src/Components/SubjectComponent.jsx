@@ -1,4 +1,4 @@
-import s from "./BodyComponent.module.css"
+import s from "./SubjectComponent.module.css"
 import { IoMdPerson } from "react-icons/io";
 import SubjectCard from "./SubjectCard.jsx"
 import { MdOutlineSearch } from "react-icons/md";
@@ -8,7 +8,7 @@ import ActionButtons from "./ActionButtons.jsx"
 import DeleteModalOverlay from "./DeleteModalOverlay"
 import { useState } from "react";
 
-function BodyComponent() {
+function SubjectComponent() {
     let [showDeleteDialogue, setShowDeleteDialogue] = useState(false);
     let onDeleteHandle = (e) => {
         e.stopPropagation();
@@ -40,4 +40,4 @@ function BodyComponent() {
         </div>
     </div>;
 }
-export default BodyComponent;
+export default SubjectComponent;

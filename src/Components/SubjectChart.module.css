@@ -1,0 +1,47 @@
+.subjectChart {
+    /* border: 1px solid #2b3630; */
+    padding-block: 10px;
+    /* padding-left: 0; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid black;
+}
+
+.subjectTitle {
+    color: #34423A;
+}
+
+.mainChartComponent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chartProgressBar {
+    width: 90%;
+    background-color: #c5dec8;
+    height: 10px;
+    border-radius: 6px;
+}
+
+@media (max-width:550px) {
+    .chartProgressBar {
+        width: 80%;
+    }
+}
+
+.chartProgress {
+    width: 84%;
+    background-color: #35b86b;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.attendancePercentage {
+    font-size: 17px;
+    font-weight: 600;
+    color: #34423A;
+}

@@ -4,6 +4,7 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { MdCheckCircle } from "react-icons/md";
 
 import { TbXboxXFilled } from "react-icons/tb";
+import SubjectChart from "./SubjectChart.jsx"
 
 function DashBoardComponent() {
     return <div className={s.OuterDashBoardContainer}>
@@ -61,18 +62,19 @@ function DashBoardComponent() {
                 </div>
             </div>
             {/* subjectWise percentage and insights */}
-            <div className={s.ChartAndInsightContainer}>
-                <div className={s.attendanceChartContainer} >
-                    <div className={s.chartContainer}>
-                        <div className={s.dashBar} style={{ width: "56%" }}>Introduction to Artificial Intelligence Introduction to Artificial Intelligence</div>
-                        <div className={s.dashBar} style={{ width: "78%" }}>Introduction to Artificial Intelligence</div>
-                        <div className={s.dashBar}>Introduction to Artificial Intelligence</div>
-                        <div className={s.dashBar}>Introduction to Artificial Intelligence</div>
-                        <div className={s.dashBar}>Introduction to Artificial Intelligence</div>
+            <div className={s.attendanceChartContainer}>
+                <div className={s.chartTitle}>Subject Attendance</div>
+                <div className={s.attendanceChartSlider}>
+                    <div className={s.attendanceChart}>
+                        <SubjectChart></SubjectChart>
+                        <SubjectChart></SubjectChart>
+                        <SubjectChart></SubjectChart>
+                        <SubjectChart></SubjectChart>
+                        <SubjectChart></SubjectChart>
                     </div>
                 </div>
-                <div className={s.attendanceInsightContainer}></div>
             </div>
+
         </div>
     </div>;
 }

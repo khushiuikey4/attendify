@@ -1,0 +1,241 @@
+.calenderOuterContainer {
+    background-color: #0A0F0D;
+    width: 100%;
+    /* min-height: 100vh; */
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+.calenderOuterContainer::-webkit-scrollbar {
+    display: none;
+}
+
+
+.calenderInnerContainer {
+    background-color: #101816;
+
+    border: 2px solid #22332D;
+    border-radius: 10px;
+    display: flex;
+    justify-self: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 20px;
+}
+
+@media (max-width:400px) {
+    .calenderOuterContainer {
+        padding: 0;
+    }
+
+    .calenderInnerContainer {
+        border: none;
+        border-radius: 0;
+    }
+}
+
+.calendarHeader {
+    /* flex: 1; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+@media (max-width:550px) {
+    .calendarHeader {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+
+    .calenderInnerContainer {
+        padding-inline: 10px;
+    }
+
+    .calendarNavigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.calendarTitle {
+    color: white;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.calendarNavigation {
+    display: flex;
+    gap: 10px;
+}
+
+
+.baseControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.backMonth,
+.forMonth {
+    background-color: #111B18;
+    color: white;
+    border: 2px solid #22332D;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.calendarNavigation :active {
+    background-color: #22332D;
+}
+
+.monthSelection,
+.yearSelection {
+    background-color: #111B18;
+    color: white;
+    border: 2px solid #22332D;
+    padding: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+.monthSelection {
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.yearSelection {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+@media (max-width:350px) {
+
+    .monthSelection,
+    .yearSelection {
+        border: 2px solid #22332D;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .monthSelect {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.calendarContainer {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #111B18;
+    border: 2px solid #22332D;
+    border-radius: 5px;
+    padding: 10px;
+
+    min-width: 0;
+    max-height: calc(100vh - 140px);
+}
+
+
+
+.calendar {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+
+    display: grid;
+
+    /*
+     * 7 equal columns
+     */
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+
+    /*
+     * 1 header row + up to 6 date rows.
+     *
+     * The date rows share the available height.
+     */
+    grid-template-rows: auto repeat(6, minmax(0, 1fr));
+}
+
+
+.day,
+.dateCell,
+.emptyCell {
+    min-width: 0;
+    min-height: 0;
+    box-sizing: border-box;
+}
+
+
+
+.day {
+    color: #8D9B96;
+    font-size: 14px;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+}
+
+
+.dateCell {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 30px;
+
+    border: 1px solid #22332D;
+}
+
+
+.emptyCell {
+    padding-block: 20px;
+}
+
+@media (max-width:500px) {
+    .dateCell {
+        padding-block: 10px;
+        font-size: 13px;
+
+    }
+
+    .emptyCell {
+        padding-block: 10px;
+
+    }
+
+}
+
+.allSubInfoContainer {
+    background-color: #71817B;
+    padding: 10px;
+    background-color: #0A0F0D;
+}
+
+
+.totalCounts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: darkslategrey;
+}

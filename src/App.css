@@ -17,9 +17,9 @@ Link {
     min-height: 100vh;
     background-color: #F9F6EE;
     background-color: #F8F6F0;
-    gap: 10px;
+    /* gap: 10px; */
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    padding: clamp(10px, 0.8vw, 15px);
+    align-items: flex-start;
+    /* padding: clamp(10px, 0.8vw, 15px); */
 }

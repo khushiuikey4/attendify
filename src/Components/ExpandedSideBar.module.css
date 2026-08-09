@@ -1,6 +1,6 @@
 .SideBarContainer {
     background-color: #0D0D0D;
-    border-radius: 16px;
+    /* border-radius: 16px; */
     padding: clamp(14px, 1.5vw, 24px);
     color: white;
     display: flex;
@@ -14,7 +14,7 @@
 
 }
 
-@media(max-width:600px) {
+@media(max-width:768px) {
     .SideBarContainer {
         position: fixed;
         top: 10px;

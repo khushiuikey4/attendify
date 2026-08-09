@@ -3,6 +3,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding: clamp(10px, 0.8vw, 15px);
+
 }
 
 
