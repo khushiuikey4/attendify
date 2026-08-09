@@ -26,7 +26,7 @@ function Calender() {
     }
 
 
-    return <><div className={s.calenderOuterContainer}>
+    return <div className={s.outerMost}><div className={s.calenderOuterContainer}>
         <div className={s.calenderInnerContainer}>
             <div className={s.calendarHeader}>
                 <div className={s.calendarTitle}>Calendar</div>
@@ -89,15 +89,56 @@ function Calender() {
                 </div>
             </div>
         </div>
-        <div className={s.allSubInfoContainer}>
-            <div className={s.totalCounts}>
-                <div className={s.totalClasses}>Total Classes : 45</div>
-                <div className={s.totalPresent}>Total Present : 45</div>
-                <div className={s.totalAbsent}>Total absent : 45</div>
-                <div className={s.totalCancelled}>Classes Cancelled : 45</div>
+        <div className={s.allSubOuterContainer}>
+            <div className={s.allSubInfoContainer}>
+                <div className={s.statTitle}>Attendence Statistics on 24 may 2026</div>
+                <div className={s.totalStatOuterContainer}>
+                    <table className={s.totalStats}>
+                        <tbody>
+                            <tr className={s.totalData}>
+                                <td>Total Classes</td>
+                                <td>45</td>
+                            </tr>
+                            <tr className={s.totalData}>
+                                <td>Total Present</td>
+                                <td>5</td>
+                            </tr>
+                            <tr className={s.totalData}>
+                                <td>Total Absent</td>
+                                <td>10</td>
+                            </tr>
+                            <tr className={s.totalData}>
+                                <td>Total Classes Cancelled</td>
+                                <td>15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className={s.subStatTable}>
+                    <table className={s.attendanceStatTable}>
+                        <thead className={s.tableHeading}>
+                            <tr>
+                                <td className={s.tableData}>Subject</td>
+                                <td className={s.tableData}>Classes Held</td>
+                                <td className={s.tableData}>Present</td>
+                                <td className={s.tableData}>Absent</td>
+                                <td className={s.tableData}>Cancelled</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className={s.tableData}>Introduction to Artificial Intelligence Introduction to Artificial Intelligence Introduction to Artificial Intelligence Introduction to Artificial Intelligence </td>
+                                <td className={s.tableData}>4</td>
+                                <td className={s.tableData}>2</td>
+                                <td className={s.tableData}>1</td>
+                                <td className={s.tableData}>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-    </>;
+    </div>;
 }
 export default Calender;

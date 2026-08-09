@@ -17,8 +17,8 @@
 @media(max-width:768px) {
     .SideBarContainer {
         position: fixed;
-        top: 10px;
-        left: 10px;
+        top: 0px;
+        left: 0px;
     }
 }
 
@@ -50,7 +50,7 @@
 }
 
 .logoContainer {
-    color: mediumseagreen;
+    color: #5BA17A;
     cursor: pointer;
 }
 

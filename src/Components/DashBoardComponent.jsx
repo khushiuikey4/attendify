@@ -46,7 +46,7 @@ function DashBoardComponent() {
                     <div className={s.dashFigure}>105</div>
                 </div>
                 <div className={s.dashBoardInfoBox}>
-                    <div className={s.dashCardLogo} style={{ color: "mediumseagreen" }}>
+                    <div className={s.dashCardLogo} style={{ color: "#5BA17A" }}>
                         {/* <IoMdCheckmarkCircleOutline /> */}
                         <MdCheckCircle />
                     </div>

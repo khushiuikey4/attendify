@@ -1,5 +1,13 @@
+.outerMost {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F8F5;
+    overflow: hidden;
+
+}
+
 .calenderOuterContainer {
-    background-color: #0A0F0D;
+    background-color: #F5F8F5;
 
     width: 100%;
     height: 100%;
@@ -12,16 +20,22 @@
 
     overflow-y: auto;
     overflow-x: hidden;
+    gap: 20px;
 }
+
+.calenderOuterContainer::-webkit-scrollbar {
+    display: none;
+}
+
 
 .calenderInnerContainer {
     width: 100%;
 
     background: linear-gradient(135deg,
-            rgba(71, 125, 91, 0.16),
-            rgba(35, 70, 52, 0.10));
+            rgba(133, 169, 117, 0.38),
+            rgba(133, 169, 117, 0.22));
 
-    border: 1px solid rgba(150, 205, 168, 0.25);
+    border: 1px solid rgba(111, 148, 96, 0.4);
     border-radius: 14px;
 
     display: flex;
@@ -33,8 +47,8 @@
     -webkit-backdrop-filter: blur(18px);
 
     box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(210, 245, 220, 0.12);
+        0 10px 30px rgba(71, 102, 62, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55);
 
     flex-shrink: 0;
 }
@@ -48,7 +62,7 @@
 }
 
 .calendarTitle {
-    color: #5d816b;
+    color: #29452E;
 
     font-size: 21px;
     font-weight: 600;
@@ -69,11 +83,12 @@
 
 .backMonth,
 .forMonth {
-    background: rgba(103, 164, 119, 0.14);
+    background: rgba(133, 169, 117, 0.28);
+    background: rgba(91, 161, 122, 0.2);
 
-    color: #9dc1ac;
+    color: #36583A;
 
-    border: 1px solid rgba(130, 180, 145, 0.30);
+    border: 1px solid rgba(91, 126, 78, 0.32);
 
     padding: 8px;
 
@@ -98,9 +113,11 @@
 
 .backMonth:hover,
 .forMonth:hover {
-    background: rgba(126, 192, 143, 0.25);
+    background: rgba(133, 169, 117, 0.42);
+    background: rgba(91, 161, 122, 0.5);
 
-    border-color: rgba(110, 165, 125, 0.45);
+
+    border-color: rgba(91, 126, 78, 0.48);
 }
 
 .backMonth:active,
@@ -119,11 +136,12 @@
 
 .monthSelection,
 .yearSelection {
-    background: rgba(103, 164, 119, 0.14);
+    /* background: rgba(133, 169, 117, 0.28); sage green */
+    background: rgba(91, 161, 122, 0.2);
 
-    color: #9dc1ac;
+    color: #36583A;
 
-    border: 1px solid rgba(130, 180, 145, 0.30);
+    border: 1px solid rgba(91, 126, 78, 0.32);
 
     padding: 10px;
 
@@ -149,13 +167,13 @@
 
 .monthSelection:focus,
 .yearSelection:focus {
-    border-color: rgba(110, 165, 125, 0.55);
+    border-color: rgba(91, 126, 78, 0.55);
 }
 
 .monthSelection option,
 .yearSelection option {
-    background-color: #accbb4;
-    color: #294F39;
+    background-color: #E3EBDD;
+    color: #29452E;
 }
 
 .calendarContainer {
@@ -163,13 +181,14 @@
 
     box-sizing: border-box;
 
-    background: rgba(91, 145, 108, 0.12);
+    /* background: rgba(133, 169, 117, 0.18); */
+    background-color: #5BA17A;
 
-    border: 1px solid rgba(151, 203, 167, 0.22);
+    /* border: 1px solid rgba(91, 126, 78, 0.28); */
 
     border-radius: 8px;
 
-    padding: 15px;
+    padding: 20px;
 
     min-width: 0;
 
@@ -177,7 +196,7 @@
     -webkit-backdrop-filter: blur(12px);
 
     box-shadow:
-        inset 0 1px 0 rgba(220, 250, 227, 0.08);
+        inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 .calendar {
@@ -205,7 +224,9 @@
 }
 
 .day {
-    color: #9dc1ac;
+    /* color: #4B694E; */
+    color: #364538;
+
 
     font-size: 14px;
     font-weight: 600;
@@ -217,8 +238,18 @@
     padding: 10px;
 }
 
+@media (max-width:500px) {
+    .day {
+        font-weight: 400;
+    }
+
+    .calendarContainer {
+        padding: 10px;
+    }
+}
+
 .dateCell {
-    color: #9dc1ac;
+    color: #29452E;
 
     display: flex;
     justify-content: center;
@@ -226,9 +257,10 @@
 
     padding-block: 30px;
 
-    background: rgba(130, 180, 145, 0.045);
+    /* background: rgba(245, 250, 244, 0.24); */
+    background-color: #8BC7A5;
 
-    border: 1px solid #4b6f5a;
+    border: 1px solid rgba(0, 0, 0, 0.24);
 
     cursor: pointer;
 
@@ -238,51 +270,105 @@
 }
 
 .dateCell:hover {
-    background: rgba(112, 177, 130, 0.20);
+    background-color: #A3D2B5;
 
-    border-color: rgba(120, 170, 135, 0.35);
+
+    border-color: rgba(91, 126, 78, 0.40);
+    border: 1px solid #2E4639;
 }
 
 .emptyCell {
     padding-block: 20px;
 
-    border: 1px solid #4b6f5a;
+    border: 1px solid rgba(91, 126, 78, 0.24);
+    border: 1px solid rgba(27, 35, 24, 0.24)
 }
 
 .allSubInfoContainer {
-    background-color: #0A0F0D;
+    background-color: #F5F8F5;
 
     width: 100%;
 
-    padding: 10px;
+    padding: 25px;
 
     flex-shrink: 0;
-}
+    background: rgba(133, 169, 117, 0.25);
 
-.totalCounts {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    gap: 15px;
-
-    padding: 15px;
-
-    background: rgba(53, 87, 66, 0.30);
-
-    border: 1px solid rgba(148, 194, 161, 0.16);
+    border: 1px solid rgba(91, 126, 78, 0.28);
 
     border-radius: 10px;
+    color: #2c402f;
 }
 
-.totalClasses,
-.totalPresent,
-.totalAbsent,
-.totalCancelled {
-    color: #9dc1ac;
+.statTitle {
+    font-size: 21px;
+    font-weight: 600;
+    padding-block: 15px;
+}
 
-    font-size: 14px;
-    font-weight: 500;
+.totalStatOuterContainer {
+    width: 50%;
+    overflow-x: scroll;
+    padding-block: 20px;
+
+}
+
+@media (max-width:532px) {
+    .totalStatOuterContainer {
+        width: 100%;
+    }
+}
+
+.totalStats {
+    width: 100%;
+    min-width: 200px;
+    border-collapse: collapse;
+
+}
+
+.totalData>td {
+    padding: 10px;
+    border: 1px solid #29452E;
+    text-align: left;
+
+}
+
+
+
+.subStatTable {
+    width: 100%;
+    /* max-width: 100%; */
+    overflow-x: scroll;
+    padding: 8px;
+    margin-block: 10px;
+    border: 1px solid #29452E;
+}
+
+
+.attendanceStatTable {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+.tableHeading,
+.tableData {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+
+.tableHeading {
+    font-weight: 600;
+}
+
+.subStatTable td:first-child {
+    max-width: 250px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 @media (max-width: 550px) {
@@ -324,6 +410,7 @@
 @media (max-width: 400px) {
     .calenderOuterContainer {
         padding: 0;
+        gap: 0;
     }
 
     .calenderInnerContainer {
@@ -331,13 +418,24 @@
 
         border-radius: 0;
     }
+
+    .allSubOuterContainer {
+        padding: 0px;
+    }
+
+    .allSubInfoContainer {
+        padding: 15px;
+        border: 1px solid transparent;
+        border-radius: 0;
+    }
+
 }
 
 @media (max-width: 350px) {
 
     .monthSelection,
     .yearSelection {
-        border: 1px solid rgba(130, 180, 145, 0.30);
+        border: 1px solid rgba(91, 126, 78, 0.32);
 
         border-radius: 7px;
 

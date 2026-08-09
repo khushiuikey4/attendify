@@ -62,7 +62,7 @@
 } */
 
 .dashBoardInfoBox {
-    background-color: rgb(60, 179, 113, 0.2);
+    background-color: rgba(91, 161, 122, 0.2);
     /* background-color: rgba(203, 163, 227, 0.5); */
     border-radius: 15px;
     padding: 20px;
@@ -136,7 +136,7 @@
 
 .progressCircle {
     fill: none;
-    stroke: #35b86b;
+    stroke: #5BA17A;
     /* stroke: green; */
     stroke-width: 10;
 
@@ -195,7 +195,7 @@
 
 .attendanceChartSlider {
     padding: 20px;
-    border: 2px solid #34423A;
+    border: 2px solid #83A390;
     border-radius: 8px;
 
 
