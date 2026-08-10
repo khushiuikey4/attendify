@@ -310,10 +310,14 @@
     width: 50%;
     overflow-x: scroll;
     padding-block: 20px;
+    padding: 8px;
+    margin-block: 20px;
+    border: 2px solid #719E82;
+    border-radius: 5px;
 
 }
 
-@media (max-width:532px) {
+@media (max-width:572px) {
     .totalStatOuterContainer {
         width: 100%;
     }
@@ -323,12 +327,13 @@
     width: 100%;
     min-width: 200px;
     border-collapse: collapse;
+    background-color: #88B69A;
 
 }
 
 .totalData>td {
     padding: 10px;
-    border: 1px solid #29452E;
+    border: 1px solid #f8f8f8;
     text-align: left;
 
 }
@@ -341,7 +346,10 @@
     overflow-x: scroll;
     padding: 8px;
     margin-block: 10px;
-    border: 1px solid #29452E;
+    border: 2px solid #719E82;
+    border-radius: 5px;
+    /* background-color: #5BA17A; */
+
 }
 
 
@@ -349,13 +357,15 @@
     width: 100%;
     min-width: 600px;
     border-collapse: collapse;
+    background: #719E82;
+
 }
 
 .tableHeading,
 .tableData {
     padding: 12px 15px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #f8f8f8;
 
 }
 
