@@ -1,47 +1,43 @@
 #include <iostream>
+#include <cmath>
+#include <utility>
+#include <vector>
+#include <unordered_map>
 using namespace std;
 
-void pattern(int n)
+vector<vector<int>> countFrequencies(vector<int> &nums)
 {
-    for (int i = n; i >= 1; i--)
+    unordered_map<int, int> track;
+    for (int i = 0; i < nums.size(); i++)
     {
-        for (int j = n; j >= i; j--)
-        {
-            cout << j;
-        }
-        for (int k = 0; k < i * 2 - 3; k++)
-        {
-            cout << i;
-        }
-        int val = i;
-        if (i == 1)
-            val++;
-        for (int l = val; l <= n; l++)
-        {
-            cout << l;
-        }
-        cout << endl;
+        track[nums[i]]++;
     }
-    for (int i = 2; i <= n; i++)
+    vector<vector<int>> ans;
+    for (auto p : track)
     {
-        for (int j = n; j >= i; j--)
-        {
-            cout << j;
-        }
-        for (int k = 0; k < 2 * i - 3; k++)
-        {
-            cout << i;
-        }
-        for (int l = i; l <= n; l++)
-        {
-            cout << l;
-        }
-        cout << endl;
+        ans.push_back({p.first, p.second});
     }
+    return ans;
 }
 
 int main()
 {
-    pattern(5);
+    vector<int> nums = {4, 4, 3, 3, 6};
+    vector<vector<int>> ans = countFrequencies(nums);
+    int maxFreq = 0, maxElement = -1;
+    for (vector<int> val : ans)
+    {
+        if (maxFreq < val[1])
+        {
+            maxFreq = val[1];
+            maxElement = val[0];
+        }
+        else if (maxFreq == val[1])
+        {
+            if (maxElement > val[0])
+                maxElement = val[0];
+        }
+    }
+    cout << maxElement;
     return 0;
 }

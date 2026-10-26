@@ -6,8 +6,8 @@ function App() {
   return <div className="Layout">
     <SideBarComponent></SideBarComponent>
     {/* <SubjectComponent></SubjectComponent> */}
-    {/* <DashBoardComponent></DashBoardComponent> */}
-    <Calender></Calender>
+    <DashBoardComponent></DashBoardComponent>
+    {/* <Calender></Calender> */}
 
 
   </div>
