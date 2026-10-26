@@ -59,6 +59,7 @@
     text-decoration: none;
 }
 
+.yourSubjects,
 .dashBoard,
 .calender,
 .settings {
@@ -77,6 +78,11 @@
     border-radius: 8px;
 }
 
+.yourSubjects:hover {
+    background-color: #CBA3E3;
+    color: #0D0D0D;
+}
+
 .dashBoard:hover {
     background-color: #CBA3E3;
     /* background-color: rgb(60, 179, 113, 0.5); */
@@ -93,6 +99,10 @@
 .settings:hover {
     background-color: #CBA3E3;
     color: #0D0D0D;
+}
+
+.yourSubjects:active {
+    background-color: #bb7ddf;
 }
 
 .dashBoard:active {

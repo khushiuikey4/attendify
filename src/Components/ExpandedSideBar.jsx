@@ -1,8 +1,7 @@
 import s from "./ExpandedSideBar.module.css"
 import { GiBookshelf } from "react-icons/gi";
 import { Link } from "react-router-dom"
-import { IoSettings } from "react-icons/io5";
-import { IoBarChartOutline } from "react-icons/io5";
+import { IoSettings, IoBarChartOutline, IoBookOutline } from "react-icons/io5";
 import { SlCalender } from "react-icons/sl";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
@@ -24,6 +23,11 @@ function ExpandedSideBar() {
                 </div>
                 <div className={s.webNameContainer}><Link to="/" className={s.webNameLink}>Attendify</Link></div>
             </div>
+            <Link to="/" className={s.yourSubjects}>
+                <div className={s.settingLogoContainer}><IoBookOutline />
+                </div>
+                <div>Your Subjects</div>
+            </Link>
             <Link to="/Dashboard" className={s.dashBoard}>
                 <div className={s.settingLogoContainer}><IoBarChartOutline />
                 </div>
